@@ -204,7 +204,7 @@ a:hover {
     height: 100vh;
     display: flex;
     align-items: center;
-    padding: 0 5%;
+    padding: 80px 5% 0 5%; /* Adjusted top padding */
     position: relative;
     overflow: hidden;
 }
