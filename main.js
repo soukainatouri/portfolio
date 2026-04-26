@@ -95,4 +95,42 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    // Hero Slideshow Logic
+    const heroSlides = document.querySelectorAll('.hero-slide');
+    if (heroSlides.length > 0) {
+        let currentSlideIndex = 0;
+        setInterval(() => {
+            heroSlides[currentSlideIndex].classList.remove('active');
+            currentSlideIndex = (currentSlideIndex + 1) % heroSlides.length;
+            heroSlides[currentSlideIndex].classList.add('active');
+        }, 4000);
+    }
+    
+    // Modal Click-Outside Logic
+    const modal = document.getElementById('imageModal');
+    if (modal) {
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+    }
 });
+
+// Modal Functions for Certificates
+function openModal(src) {
+    const modal = document.getElementById('imageModal');
+    const modalImg = document.getElementById('modalImage');
+    if (modal && modalImg) {
+        modalImg.src = src;
+        modal.classList.add('show');
+    }
+}
+
+function closeModal() {
+    const modal = document.getElementById('imageModal');
+    if (modal) {
+        modal.classList.remove('show');
+    }
+}

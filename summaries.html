@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الملخصات - سكينة توري</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .page-header {
+            padding: 150px 5% 50px;
+            text-align: center;
+            background: var(--bg-light);
+            border-bottom: 1px solid var(--border);
+        }
+        .page-content {
+            padding: 50px 5%;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .period-title {
+            font-size: 2rem;
+            margin: 40px 0 20px;
+            color: var(--accent);
+            border-bottom: 2px solid var(--border);
+            padding-bottom: 10px;
+        }
+        .parts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        .part-card {
+            background: var(--bg-color);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 30px 20px;
+            text-align: center;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 150px;
+        }
+        .part-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(196, 122, 255, 0.2);
+        }
+        .part-title {
+            font-size: 1.2rem;
+            color: var(--text-main);
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar scrolled">
+        <div class="logo"><img src="assets/souka.svg" alt="Portfolio Logo" style="height: 40px;"></div>
+        <div class="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <ul class="nav-links" dir="rtl">
+            <li><a href="index.html#hero">الرئيسية</a></li>
+            <li><a href="index.html#about">حول</a></li>
+            <li><a href="index.html#training" class="active">التكوين</a></li>
+            <li><a href="index.html#internship">التدريب</a></li>
+            <li><a href="index.html#integrated">الأنشطة</a></li>
+            <li><a href="index.html#project">المشروع</a></li>
+        </ul>
+    </nav>
+
+    <div class="mobile-menu">
+        <ul class="mobile-nav-links" dir="rtl">
+            <li><a href="index.html#hero">الرئيسية</a></li>
+            <li><a href="index.html#about">حول</a></li>
+            <li><a href="index.html#training">التكوين</a></li>
+            <li><a href="index.html#internship">التدريب</a></li>
+            <li><a href="index.html#integrated">الأنشطة</a></li>
+            <li><a href="index.html#project">المشروع</a></li>
+        </ul>
+    </div>
+
+    <header class="page-header" style="position: relative; overflow: hidden; border-bottom: none;">
+        <!-- Slideshow Backgrounds -->
+        <div class="hero-slideshow">
+            <div class="hero-slide active" style="background-image: url('assets/hero/IMG-20260426-WA0092.jpg');"></div>
+            <div class="hero-slide" style="background-image: url('assets/hero/IMG-20260426-WA0093.jpg');"></div>
+            <div class="hero-slide" style="background-image: url('assets/hero/IMG-20260426-WA0018.jpg');"></div>
+            <div class="hero-overlay"></div>
+        </div>
+        <div style="position: relative; z-index: 10;">
+            <h1 class="section-title accent-text arabic-text" style="color: white; text-shadow: 0 2px 10px rgba(0,0,0,0.8); margin-bottom: 0;">الملخصات والمجزوءات</h1>
+        </div>
+    </header>
+
+    <section class="page-content arabic-text">
+        <div class="period-section">
+            <h2 class="period-title">الدورة الأولى</h2>
+            <div class="parts-grid">
+                <div class="part-card"><div class="part-title">مجزوءة 1</div></div>
+                <div class="part-card"><div class="part-title">مجزوءة 2</div></div>
+                <div class="part-card"><div class="part-title">مجزوءة 3</div></div>
+                <div class="part-card"><div class="part-title">مجزوءة 4</div></div>
+                <div class="part-card"><div class="part-title">مجزوءة 5</div></div>
+                <div class="part-card"><div class="part-title">مجزوءة 6</div></div>
+                <div class="part-card"><div class="part-title">مجزوءة 7</div></div>
+                <div class="part-card"><div class="part-title">مجزوءة 8</div></div>
+                <div class="part-card"><div class="part-title">مجزوءة 9</div></div>
+                <div class="part-card"><div class="part-title">مجزوءة 10</div></div>
+                <div class="part-card"><div class="part-title">مجزوءة 11</div></div>
+                <div class="part-card"><div class="part-title">مجزوءة 12</div></div>
+            </div>
+        </div>
+
+        <div class="period-section">
+            <h2 class="period-title">الدورة الثانية</h2>
+            <div class="parts-grid">
+                <div class="part-card"><div class="part-title">مجزوءة 1</div></div>
+                <div class="part-card"><div class="part-title">مجزوءة 2</div></div>
+                <div class="part-card"><div class="part-title">مجزوءة 3</div></div>
+                <div class="part-card"><div class="part-title">مجزوءة 4</div></div>
+                <div class="part-card"><div class="part-title">مجزوءة 5</div></div>
+                <div class="part-card"><div class="part-title">مجزوءة 6</div></div>
+                <div class="part-card"><div class="part-title">مجزوءة 7</div></div>
+                <div class="part-card"><div class="part-title">مجزوءة 8</div></div>
+                <div class="part-card"><div class="part-title">مجزوءة 9</div></div>
+                <div class="part-card"><div class="part-title">مجزوءة 10</div></div>
+                <div class="part-card"><div class="part-title">مجزوءة 11</div></div>
+                <div class="part-card"><div class="part-title">مجزوءة 12</div></div>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 50px;">
+            <a href="index.html" class="btn-primary"><i class="fa-solid fa-arrow-right"></i> العودة للرئيسية</a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 Digital Portfolio. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>

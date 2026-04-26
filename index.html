@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,36 +9,39 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Noto+Kufi+Arabic:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Noto+Kufi+Arabic:wght@300;400;600;800&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 <body>
     <nav class="navbar">
-        <div class="logo">Portfolio.</div>
+        <div class="logo"><img src="assets/souka.svg" alt="Portfolio Logo" style="height: 40px;"></div>
         <div class="hamburger">
             <div class="line"></div>
             <div class="line"></div>
             <div class="line"></div>
         </div>
-        <ul class="nav-links">
-            <li><a href="#hero" class="active">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#training">Training</a></li>
-            <li><a href="#internship">Internship</a></li>
-            <li><a href="#integrated">Activities</a></li>
-            <li><a href="#project">Project</a></li>
+        <ul class="nav-links" dir="rtl">
+            <li><a href="#hero" class="active">الرئيسية</a></li>
+            <li><a href="#about">حول</a></li>
+            <li><a href="#training">التكوين</a></li>
+            <li><a href="#internship">التدريب</a></li>
+            <li><a href="#integrated">الأنشطة</a></li>
+            <li><a href="#project">المشروع</a></li>
         </ul>
     </nav>
 
     <!-- Mobile Menu Overlay -->
     <div class="mobile-menu">
-        <ul class="mobile-nav-links">
-            <li><a href="#hero">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#training">Training</a></li>
-            <li><a href="#internship">Internship</a></li>
-            <li><a href="#integrated">Activities</a></li>
-            <li><a href="#project">Project</a></li>
+        <ul class="mobile-nav-links" dir="rtl">
+            <li><a href="#hero">الرئيسية</a></li>
+            <li><a href="#about">حول</a></li>
+            <li><a href="#training">التكوين</a></li>
+            <li><a href="#internship">التدريب</a></li>
+            <li><a href="#integrated">الأنشطة</a></li>
+            <li><a href="#project">المشروع</a></li>
         </ul>
     </div>
 
@@ -46,82 +50,111 @@
         <div id="smooth-content">
 
             <header id="hero" class="hero-section">
-                <div class="hero-content">
-                    <h1 class="hero-title">
-                        <span class="fade-up-word">Shaping</span>
-                        <span class="fade-up-word accent-text">Experiences</span><br>
-                        <span class="fade-up-word">Through</span>
-                        <span class="fade-up-word">Learning.</span>
-                    </h1>
-                    <p class="hero-subtitle fade-up delay-1">Un portfolio numérique regroupant mes activités académiques et professionnelles.</p>
-                    <a href="#about" class="scroll-down fade-up delay-2">
-                        <i class="fa-solid fa-arrow-down"></i>
-                    </a>
+                <!-- Slideshow Backgrounds -->
+                <div class="hero-slideshow">
+                    <div class="hero-slide active"
+                        style="background-image: url('assets/hero/IMG-20260426-WA0001.jpg');"></div>
+                    <div class="hero-slide" style="background-image: url('assets/hero/IMG-20260426-WA0004.jpg');"></div>
+                    <div class="hero-slide" style="background-image: url('assets/hero/IMG-20260426-WA0005.jpg');"></div>
+                    <div class="hero-slide" style="background-image: url('assets/hero/IMG-20260426-WA0018.jpg');"></div>
+                    <div class="hero-slide" style="background-image: url('assets/hero/IMG-20260426-WA0092.jpg');"></div>
+                    <div class="hero-slide" style="background-image: url('assets/hero/IMG-20260426-WA0093.jpg');"></div>
+                    <div class="hero-overlay"></div>
                 </div>
-                <!-- Background elements -->
-                <div class="bg-glow glow-1"></div>
-                <div class="bg-glow glow-2"></div>
+
+                <div class="hero-content" dir="rtl">
+                    <p class="hero-subtitle fade-up delay-1 arabic-text">أطمح لتسخير خبرتي التقنية لتسهيل العملية
+                        التعليمية للأستاذ والمتعلم على حد سواء، إيماناً مني بأهمية توظيف تكنولوجيا المعلومات والاتصال في
+                        تطوير التعلمات.</p>
+                    <a href="about_me.html" class="btn-primary fade-up delay-2">اقرأ المزيد <i
+                            class="fa-solid fa-arrow-left"></i></a>
+                </div>
             </header>
 
-            <!-- 1. About Me -->
-            <section id="about" class="section">
-                <div class="container">
-                    <h2 class="section-title fade-up">About Me <span class="accent-dot">.</span></h2>
-                    <div class="about-grid">
-                        <div class="about-intro fade-up">
-                            <p class="large-text">Je suis passionné par l'apprentissage continu et le développement de compétences pratiques.</p>
-                            <p class="additional-desc">Mon objectif est d'allier théorie et pratique pour apporter une réelle valeur ajoutée aux projets dans lesquels je m'investis. Toujours curieux et motivé par de nouveaux défis, ce portfolio retrace mon parcours académique et mes expériences de terrain.</p>
-                        </div>
-                        
-                        <div class="about-cards fade-up delay-1">
-                            <div class="card card-hover">
-                                <div class="card-icon"><i class="fa-solid fa-briefcase"></i></div>
-                                <h3>Les expériences</h3>
-                                <p>Diverses expériences professionnelles et académiques qui ont forgé mon profil et ma vision.</p>
-                            </div>
-                            <div class="card card-hover" dir="rtl">
-                                <div class="card-icon"><i class="fa-solid fa-graduation-cap"></i></div>
-                                <h3>شواهد / Les diplômes</h3>
-                                <p>الشواهد والدبلومات المحصل عليها خلال مسيرتي الدراسية.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
 
             <!-- 2. Training Activities -->
             <section id="training" class="section dark-section">
                 <div class="container">
-                    <h2 class="section-title fade-up">Les activités de formation <span class="accent-dot">.</span></h2>
-                    
-                    <div class="training-grid">
+                    <h2 class="section-title fade-up" dir="rtl">مركز التكوين وأنشطة التكوين <span
+                            class="accent-dot">.</span></h2>
+
+                    <div class="training-grid" style="grid-template-columns: 1fr; gap: 40px;">
                         <!-- Training Center -->
-                        <div class="training-item fade-up" dir="rtl">
+                        <div class="training-item fade-up" dir="rtl" style="min-width: 0;">
                             <h3 class="subsection-title accent-text">مركز التكوين</h3>
-                            <p class="arabic-text">معلومات حول مركز التكوين والفترة التدريبية، مع مجموعة من الصور التوثيقية.</p>
-                            <div class="image-gallery">
-                                <div class="img-wrapper">
-                                    <img src="assets/training-1.jpg" alt="Training Center 1" class="gallery-img">
-                                    <div class="img-overlay"></div>
-                                </div>
-                                <div class="img-wrapper">
-                                    <img src="assets/training-2.jpg" alt="Training Center 2" class="gallery-img">
-                                    <div class="img-overlay"></div>
+                            <p class="arabic-text" style="margin-bottom: 20px;">معلومات حول مركز التكوين والفترة
+                                التدريبية، مع مجموعة من الصور التوثيقية.</p>
+                            <div class="center-slideshow-container">
+                                <div class="center-slideshow-track">
+                                    <!-- Double the items for seamless infinite scroll -->
+                                    <div class="center-card" onclick="window.location.href='centre_formation.html'">
+                                        <img src="assets/center/IMG-20260426-WA0003.jpg" alt="Center Image">
+                                        <div class="center-card-info arabic-text">معلومات عن مركز التكوين</div>
+                                    </div>
+                                    <div class="center-card" onclick="window.location.href='centre_formation.html'">
+                                        <img src="assets/center/IMG-20260426-WA0038.jpg" alt="Center Image">
+                                        <div class="center-card-info arabic-text">معلومات إضافية</div>
+                                    </div>
+                                    <div class="center-card" onclick="window.location.href='centre_formation.html'">
+                                        <img src="assets/center/IMG-20260426-WA0071.jpg" alt="Center Image">
+                                        <div class="center-card-info arabic-text">نشاط في المركز</div>
+                                    </div>
+                                    <div class="center-card" onclick="window.location.href='centre_formation.html'">
+                                        <img src="assets/center/IMG-20260426-WA0075.jpg" alt="Center Image">
+                                        <div class="center-card-info arabic-text">مرافق التكوين</div>
+                                    </div>
+                                    <div class="center-card" onclick="window.location.href='centre_formation.html'">
+                                        <img src="assets/center/IMG-20260426-WA0076.jpg" alt="Center Image">
+                                        <div class="center-card-info arabic-text">صورة تذكارية</div>
+                                    </div>
+                                    <div class="center-card" onclick="window.location.href='centre_formation.html'">
+                                        <img src="assets/center/IMG-20260426-WA0078.jpg" alt="Center Image">
+                                        <div class="center-card-info arabic-text">تطوير المهارات</div>
+                                    </div>
+                                    <!-- Duplicate for smooth scroll loop -->
+                                    <div class="center-card" onclick="window.location.href='centre_formation.html'">
+                                        <img src="assets/center/IMG-20260426-WA0003.jpg" alt="Center Image">
+                                        <div class="center-card-info arabic-text">معلومات عن مركز التكوين</div>
+                                    </div>
+                                    <div class="center-card" onclick="window.location.href='centre_formation.html'">
+                                        <img src="assets/center/IMG-20260426-WA0038.jpg" alt="Center Image">
+                                        <div class="center-card-info arabic-text">معلومات إضافية</div>
+                                    </div>
+                                    <div class="center-card" onclick="window.location.href='centre_formation.html'">
+                                        <img src="assets/center/IMG-20260426-WA0071.jpg" alt="Center Image">
+                                        <div class="center-card-info arabic-text">نشاط في المركز</div>
+                                    </div>
+                                    <div class="center-card" onclick="window.location.href='centre_formation.html'">
+                                        <img src="assets/center/IMG-20260426-WA0075.jpg" alt="Center Image">
+                                        <div class="center-card-info arabic-text">مرافق التكوين</div>
+                                    </div>
+                                    <div class="center-card" onclick="window.location.href='centre_formation.html'">
+                                        <img src="assets/center/IMG-20260426-WA0076.jpg" alt="Center Image">
+                                        <div class="center-card-info arabic-text">صورة تذكارية</div>
+                                    </div>
+                                    <div class="center-card" onclick="window.location.href='centre_formation.html'">
+                                        <img src="assets/center/IMG-20260426-WA0078.jpg" alt="Center Image">
+                                        <div class="center-card-info arabic-text">تطوير المهارات</div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
                         <!-- Semesters Summaries -->
-                        <div class="training-summaries fade-up delay-1" dir="rtl">
+                        <div class="training-summaries fade-up delay-1" dir="rtl"
+                            style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
                             <div class="summary-card card-hover">
                                 <h3>تلخيصات الدورة الأولى</h3>
-                                <p class="arabic-text">ملخصات ومقررات الدورة التكوينية الأولى شاملة لكل المحاور الأساسية.</p>
-                                <a href="#" class="btn-link">عرض الملخصات <i class="fa-solid fa-arrow-left"></i></a>
+                                <p class="arabic-text">ملخصات ومقررات الدورة التكوينية الأولى شاملة لكل المحاور
+                                    الأساسية.</p>
+                                <a href="summaries.html" class="btn-link">عرض الملخصات <i
+                                        class="fa-solid fa-arrow-left"></i></a>
                             </div>
                             <div class="summary-card card-hover">
                                 <h3>تلخيصات الدورة 2</h3>
                                 <p class="arabic-text">أهم الدروس والأنشطة المنجزة خلال الدورة التكوينية الثانية.</p>
-                                <a href="#" class="btn-link">عرض الملخصات <i class="fa-solid fa-arrow-left"></i></a>
+                                <a href="summaries.html" class="btn-link">عرض الملخصات <i
+                                        class="fa-solid fa-arrow-left"></i></a>
                             </div>
                         </div>
                     </div>
@@ -132,7 +165,7 @@
             <section id="internship" class="section">
                 <div class="container">
                     <h2 class="section-title fade-up">Les activités de Stage <span class="accent-dot">.</span></h2>
-                    
+
                     <div class="internship-content">
                         <div class="accordion fade-up">
                             <div class="accordion-item" dir="rtl">
@@ -141,17 +174,19 @@
                                     <span class="icon-plus"></span>
                                 </div>
                                 <div class="accordion-content">
-                                    <p class="arabic-text">نبذة عن المؤسسة التعليمية التي تم إجراء التدريب بها، هيكلتها والتأطير الإداري والتربوي الذي استفدت منه.</p>
+                                    <p class="arabic-text">نبذة عن المؤسسة التعليمية التي تم إجراء التدريب بها، هيكلتها
+                                        والتأطير الإداري والتربوي الذي استفدت منه.</p>
                                 </div>
                             </div>
-                            
+
                             <div class="accordion-item" dir="rtl">
                                 <div class="accordion-header">
                                     <h3>بعض الأنشطة</h3>
                                     <span class="icon-plus"></span>
                                 </div>
                                 <div class="accordion-content">
-                                    <p class="arabic-text">تفاصيل الأنشطة الصفية والموازية التي قمت بالمشاركة فيها وتنشيطها داخل المؤسسة بالتعاون مع الطاقم التربوي.</p>
+                                    <p class="arabic-text">تفاصيل الأنشطة الصفية والموازية التي قمت بالمشاركة فيها
+                                        وتنشيطها داخل المؤسسة بالتعاون مع الطاقم التربوي.</p>
                                 </div>
                             </div>
 
@@ -161,7 +196,8 @@
                                     <span class="icon-plus"></span>
                                 </div>
                                 <div class="accordion-content">
-                                    <p class="arabic-text">تقارير مفصلة حول سير التداريب الميدانية والملاحظات والاستنتاجات المستخلصة في كل مرحلة.</p>
+                                    <p class="arabic-text">تقارير مفصلة حول سير التداريب الميدانية والملاحظات
+                                        والاستنتاجات المستخلصة في كل مرحلة.</p>
                                     <a href="#" class="btn-outline mt-4">تحميل التقارير</a>
                                 </div>
                             </div>
@@ -174,17 +210,19 @@
             <section id="integrated" class="section dark-section">
                 <div class="container">
                     <h2 class="section-title fade-up" dir="rtl">الأنشطة المندمجة <span class="accent-dot">.</span></h2>
-                    
+
                     <div class="integrated-grid fade-up" dir="rtl">
                         <div class="integrated-card card-hover">
                             <div class="card-icon"><i class="fa-solid fa-folder-open"></i></div>
                             <h3>توثيقات</h3>
-                            <p class="arabic-text">مجموعة من الوثائق والموارد المتعلقة بالأنشطة المندمجة والحياة المدرسية داخل المؤسسة.</p>
+                            <p class="arabic-text">مجموعة من الوثائق والموارد المتعلقة بالأنشطة المندمجة والحياة
+                                المدرسية داخل المؤسسة.</p>
                         </div>
                         <div class="integrated-card card-hover">
                             <div class="card-icon"><i class="fa-solid fa-file-lines"></i></div>
                             <h3>تقارير</h3>
-                            <p class="arabic-text">تقارير الأنشطة الثقافية والفنية والرياضية التي تم الإشراف عليها أو المشاركة في تنظيمها.</p>
+                            <p class="arabic-text">تقارير الأنشطة الثقافية والفنية والرياضية التي تم الإشراف عليها أو
+                                المشاركة في تنظيمها.</p>
                         </div>
                     </div>
                 </div>
@@ -194,12 +232,14 @@
             <section id="project" class="section">
                 <div class="container">
                     <h2 class="section-title fade-up" dir="rtl">المشروع الشخصي <span class="accent-dot">.</span></h2>
-                    
+
                     <div class="project-showcase fade-up delay-1">
                         <div class="project-info" dir="rtl">
                             <h3 class="project-title">تطوير منصة تعليمية تفاعلية</h3>
-                            <p class="arabic-text">مشروع شخصي يهدف إلى تسهيل عملية التعلم عن بعد باستخدام أحدث التقنيات الرقمية، لتوفير بيئة تعليمية مرنة وتفاعلية للمتعلمين وتشجيع الابتكار التربوي.</p>
-                            <a href="#" class="btn-primary mt-4">اكتشف المشروع <i class="fa-solid fa-arrow-left"></i></a>
+                            <p class="arabic-text">مشروع شخصي يهدف إلى تسهيل عملية التعلم عن بعد باستخدام أحدث التقنيات
+                                الرقمية، لتوفير بيئة تعليمية مرنة وتفاعلية للمتعلمين وتشجيع الابتكار التربوي.</p>
+                            <a href="#" class="btn-primary mt-4">اكتشف المشروع <i
+                                    class="fa-solid fa-arrow-left"></i></a>
                         </div>
                         <div class="project-visual">
                             <div class="project-image-wrapper">
@@ -232,4 +272,5 @@
 
     <script src="main.js"></script>
 </body>
+
 </html>
