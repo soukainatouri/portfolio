@@ -143,10 +143,12 @@ function setTheme(theme) {
         document.body.setAttribute('data-theme', 'kids');
         localStorage.setItem('portfolio-theme', 'kids');
         spawnInitialButterflies();
+        if (typeof addPageDecorations === 'function') addPageDecorations();
     } else {
         document.body.removeAttribute('data-theme');
         localStorage.setItem('portfolio-theme', 'dark');
         removeButterflies();
+        if (typeof removePageDecorations === 'function') removePageDecorations();
     }
 }
 
@@ -176,7 +178,15 @@ function spawnSingleButterfly(x, y, isSmall = false) {
     const colors = ['#f43f5e', '#3b82f6', '#10b981', '#f59e0b', '#8b5cf6'];
     const randomColor = colors[Math.floor(Math.random() * colors.length)];
     
-    butterfly.innerHTML = `<svg width="40" height="40" viewBox="0 0 24 24" fill="${randomColor}"><path d="M12 15C10 11 3 8 3 13C3 17 9 20 12 21C15 20 21 17 21 13C21 8 14 11 12 15Z"/><path d="M11 2C11 1.4 11.4 1 12 1C12.6 1 13 1.4 13 2V12C13 12.6 12.6 13 12 13C11.4 13 11 12.6 11 12V2Z" fill="#333"/></svg>`;
+    const butterflySvg = `<svg width="40" height="40" viewBox="0 0 24 24" fill="${randomColor}"><path d="M12 15C10 11 3 8 3 13C3 17 9 20 12 21C15 20 21 17 21 13C21 8 14 11 12 15Z"/><path d="M11 2C11 1.4 11.4 1 12 1C12.6 1 13 1.4 13 2V12C13 12.6 12.6 13 12 13C11.4 13 11 12.6 11 12V2Z" fill="#333"/></svg>`;
+    const teddySvg = `<svg width="40" height="40" viewBox="0 0 24 24" fill="${randomColor}"><circle cx="6" cy="6" r="3"/><circle cx="18" cy="6" r="3"/><circle cx="12" cy="12" r="8"/><circle cx="12" cy="14" r="3" fill="white"/><circle cx="12" cy="13" r="1.5" fill="#333"/><circle cx="9" cy="10" r="1.5" fill="#333"/><circle cx="15" cy="10" r="1.5" fill="#333"/></svg>`;
+    const flowerSvg = `<svg width="40" height="40" viewBox="0 0 24 24" fill="${randomColor}"><circle cx="12" cy="6" r="5"/><circle cx="12" cy="18" r="5"/><circle cx="6" cy="12" r="5"/><circle cx="18" cy="12" r="5"/><circle cx="12" cy="12" r="4" fill="#fcd34d"/></svg>`;
+    const carSvg = `<svg width="40" height="40" viewBox="0 0 24 24" fill="${randomColor}"><path d="M4 11V15H20V11H16L13 7H8L5 11H4Z"/><circle cx="7" cy="15" r="2.5" fill="#333"/><circle cx="17" cy="15" r="2.5" fill="#333"/></svg>`;
+    
+    const shapes = [butterflySvg, teddySvg, flowerSvg, carSvg];
+    const randomShape = shapes[Math.floor(Math.random() * shapes.length)];
+    
+    butterfly.innerHTML = randomShape;
     
     document.body.appendChild(butterfly);
     
@@ -248,3 +258,57 @@ interactableElements.forEach(el => {
         }
     });
 });
+
+function addPageDecorations() {
+    if (document.querySelector('.page-decorations')) return;
+    
+    const container = document.createElement('div');
+    container.className = 'page-decorations';
+    container.style.position = 'fixed';
+    container.style.top = '0';
+    container.style.left = '0';
+    container.style.width = '100%';
+    container.style.height = '100%';
+    container.style.pointerEvents = 'none';
+    container.style.zIndex = '0';
+    container.style.overflow = 'hidden';
+    
+    const positions = [
+        {top: '10%', left: '5%'},
+        {top: '20%', right: '8%'},
+        {bottom: '15%', left: '10%'},
+        {bottom: '25%', right: '5%'},
+        {top: '50%', left: '2%'},
+        {top: '60%', right: '3%'},
+        {top: '80%', left: '8%'},
+        {top: '30%', right: '2%'},
+    ];
+    
+    const colors = ['#f43f5e', '#3b82f6', '#10b981', '#f59e0b', '#8b5cf6'];
+    
+    positions.forEach(pos => {
+        const el = document.createElement('div');
+        el.style.position = 'absolute';
+        Object.assign(el.style, pos);
+        el.style.opacity = '0.3';
+        el.style.transform = `rotate(${Math.random() * 360}deg) scale(${0.8 + Math.random() * 1.5})`;
+        
+        const randomColor = colors[Math.floor(Math.random() * colors.length)];
+        const isStar = Math.random() > 0.5;
+        
+        if (isStar) {
+            el.innerHTML = `<svg width="60" height="60" viewBox="0 0 24 24" fill="${randomColor}"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/></svg>`;
+        } else {
+            el.innerHTML = `<svg width="60" height="60" viewBox="0 0 24 24" fill="${randomColor}"><circle cx="12" cy="6" r="5"/><circle cx="12" cy="18" r="5"/><circle cx="6" cy="12" r="5"/><circle cx="18" cy="12" r="5"/><circle cx="12" cy="12" r="4" fill="#fcd34d"/></svg>`;
+        }
+        
+        container.appendChild(el);
+    });
+    
+    document.body.appendChild(container);
+}
+
+function removePageDecorations() {
+    const decors = document.querySelector('.page-decorations');
+    if (decors) decors.remove();
+}
