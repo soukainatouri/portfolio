@@ -378,3 +378,57 @@ function removePageDecorations() {
     const decors = document.querySelector('.page-decorations');
     if (decors) decors.remove();
 }
+
+// Card Slideshows Logic
+document.addEventListener('DOMContentLoaded', () => {
+    const cardSliders = document.querySelectorAll('.card-slider');
+    cardSliders.forEach(slider => {
+        const slides = slider.querySelectorAll('.card-slide');
+        if (slides.length > 1) {
+            let currentSlide = 0;
+            setTimeout(() => {
+                setInterval(() => {
+                    slides[currentSlide].classList.remove('active');
+                    currentSlide = (currentSlide + 1) % slides.length;
+                    slides[currentSlide].classList.add('active');
+                }, 3500); // 3.5 seconds
+            }, Math.random() * 1000);
+        }
+    });
+});
+
+// Image Modal Logic
+window.openImageModal = function(src) {
+    const modal = document.getElementById('image-modal');
+    const modalImg = document.getElementById('modal-img');
+    if (modal && modalImg) {
+        modalImg.src = src;
+        modal.classList.add('show');
+    }
+};
+
+window.closeImageModal = function() {
+    const modal = document.getElementById('image-modal');
+    if (modal) {
+        modal.classList.remove('show');
+    }
+};
+
+// PDF Modal Logic
+window.openPdfModal = function(src) {
+    const modal = document.getElementById('pdf-modal');
+    const modalPdf = document.getElementById('modal-pdf');
+    if (modal && modalPdf) {
+        modalPdf.src = src;
+        modal.classList.add('show');
+    }
+};
+
+window.closePdfModal = function() {
+    const modal = document.getElementById('pdf-modal');
+    const modalPdf = document.getElementById('modal-pdf');
+    if (modal) {
+        modal.classList.remove('show');
+        if(modalPdf) modalPdf.src = '';
+    }
+};
