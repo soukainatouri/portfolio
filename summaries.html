@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@400;600;800&family=Fredoka:wght@400;600;800&family=Inter:wght@300;400;600;800&family=Noto+Kufi+Arabic:wght@300;400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         .page-header {
@@ -65,14 +65,17 @@
             <div class="line"></div>
             <div class="line"></div>
         </div>
-        <ul class="nav-links" dir="rtl">
-            <li><a href="index.html#hero">الرئيسية</a></li>
-            <li><a href="index.html#about">حول</a></li>
-            <li><a href="index.html#training" class="active">التكوين</a></li>
-            <li><a href="index.html#internship">التدريب</a></li>
-            <li><a href="index.html#integrated">الأنشطة</a></li>
-            <li><a href="index.html#project">المشروع</a></li>
-        </ul>
+        <div class="desktop-nav-group" style="display: flex; align-items: center; gap: 20px;">
+            <ul class="nav-links" dir="rtl">
+                <li><a href="index.html#hero">الرئيسية</a></li>
+                <li><a href="index.html#about">حول</a></li>
+                <li><a href="index.html#training" class="active">التكوين</a></li>
+                <li><a href="index.html#internship">التدريب</a></li>
+                <li><a href="index.html#integrated">الأنشطة</a></li>
+                <li><a href="index.html#project">المشروع</a></li>
+            </ul>
+            <button id="theme-toggle" class="theme-btn">🎨 ألوان</button>
+        </div>
     </nav>
 
     <div class="mobile-menu">
@@ -83,6 +86,7 @@
             <li><a href="index.html#internship">التدريب</a></li>
             <li><a href="index.html#integrated">الأنشطة</a></li>
             <li><a href="index.html#project">المشروع</a></li>
+            <li><button id="mobile-theme-toggle" class="theme-btn">🎨 ألوان</button></li>
         </ul>
     </div>
 
