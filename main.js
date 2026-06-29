@@ -270,7 +270,7 @@ function addPageDecorations() {
     container.style.width = '100%';
     container.style.height = '100%';
     container.style.pointerEvents = 'none';
-    container.style.zIndex = '0';
+    container.style.zIndex = '-1';
     container.style.overflow = 'hidden';
     
     const positions = [
