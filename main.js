@@ -107,6 +107,72 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 4000);
     }
     
+    // Project Diaporama Logic
+    const projectSlides = document.querySelectorAll('.project-slide');
+    const prevBtn = document.querySelector('.prev-btn');
+    const nextBtn = document.querySelector('.next-btn');
+    const dotsContainer = document.querySelector('.diaporama-dots');
+
+    if (projectSlides.length > 0) {
+        let currentProjectSlide = 0;
+
+        // Create dots
+        projectSlides.forEach((_, index) => {
+            const dot = document.createElement('div');
+            dot.classList.add('diaporama-dot');
+            if (index === 0) dot.classList.add('active');
+            dot.addEventListener('click', () => goToProjectSlide(index));
+            dotsContainer.appendChild(dot);
+        });
+
+        const dots = document.querySelectorAll('.diaporama-dot');
+
+        function updateProjectDiaporama() {
+            projectSlides.forEach(slide => slide.classList.remove('active'));
+            dots.forEach(dot => dot.classList.remove('active'));
+            
+            projectSlides[currentProjectSlide].classList.add('active');
+            dots[currentProjectSlide].classList.add('active');
+        }
+
+        function goToProjectSlide(index) {
+            currentProjectSlide = index;
+            updateProjectDiaporama();
+            resetProjectInterval();
+        }
+
+        function nextProjectSlide() {
+            currentProjectSlide = (currentProjectSlide + 1) % projectSlides.length;
+            updateProjectDiaporama();
+        }
+
+        function prevProjectSlide() {
+            currentProjectSlide = (currentProjectSlide - 1 + projectSlides.length) % projectSlides.length;
+            updateProjectDiaporama();
+        }
+
+        if (nextBtn) {
+            nextBtn.addEventListener('click', () => {
+                nextProjectSlide();
+                resetProjectInterval();
+            });
+        }
+
+        if (prevBtn) {
+            prevBtn.addEventListener('click', () => {
+                prevProjectSlide();
+                resetProjectInterval();
+            });
+        }
+
+        let projectInterval = setInterval(nextProjectSlide, 3000);
+
+        function resetProjectInterval() {
+            clearInterval(projectInterval);
+            projectInterval = setInterval(nextProjectSlide, 3000);
+        }
+    }
+    
     // Modal Click-Outside Logic
     const modal = document.getElementById('imageModal');
     if (modal) {
